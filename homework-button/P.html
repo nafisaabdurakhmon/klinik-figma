@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                padding: 50px;
+                height: 100vh;
+            }
+            /* father */
+            .father {
+                border: 1px solid;
+                width: 200px;
+                height: 120px;
+                text-align: center;
+                border-radius: 25px;
+            }
+            .father p {
+                font-size: 30px;
+                font-weight: 300;
+                color: red;
+            }
+            /* mother */
+            .mother {
+                width: 200px;
+                height: 120px;
+                text-align: center;
+                border: 1px solid;
+                border-radius: 25px;
+            }
+
+            .mother > p {
+                font-size: 30px;
+                font-weight: 300;
+                color: blue;
+            }
+            /* mother3 */
+            .mother3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 120px;
+                text-align: center;
+                border: 1px solid;
+                border-radius: 25px;
+            }
+
+            .mother3 + p {
+                font-size: 30px;
+                font-weight: 300;
+                color: green;
+            }
+
+            /*woman*/
+            .woman {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 120px;
+                text-align: center;
+                border: 1px solid;
+                border-radius: 25px;
+            }
+            .woman ~ p {
+                font-size: 30px;
+                font-weight: 300;
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="father">
+            <p>baby1</p>
+            <p>baby2</p>
+            <div class="father2">
+                <p>baby3</p>
+            </div>
+        </div>
+        <div class="mother">
+            <p>son</p>
+            <p>son</p>
+            <div class="mother2">
+                <p>son</p>
+                <p>son</p>
+            </div>
+        </div>
+        <div class="mother3">
+            <p>daughter</p>
+            <p>daughter</p>
+        </div>
+        <p>daughter</p>
+        <div class="woman">
+            <p>girl</p>
+        </div>
+        <p>girl</p>
+        <p>boy</p>
+    </body>
+</html>

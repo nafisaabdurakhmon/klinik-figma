@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: grid;
+    width: 80%;
+    height: 80vh;
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-columns: 2fr 1fr;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.navbar {
+    grid-column: span 2;
+    background: #f8b6b6;
+    text-align: center;
+    padding: 20px;
+}
+
+.main {
+    background: #add8e6;
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar {
+    background: #f4a261;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    grid-column: span 2;
+    background: #90ee90;
+    text-align: center;
+    padding: 20px;
+}

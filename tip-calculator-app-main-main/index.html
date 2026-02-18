@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(202, 86%, 94%);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        width: 670px;
+        height: 290px;
+        border-radius: 10px;
+      }
+      .container > div {
+        flex: 1;
+      }
+      .tipcalculator {
+        padding: 2rem;
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .tipamount {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+      }
+      .total {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: hsl(183, 100%, 15%);
+        width: 295px;
+        height: 234px;
+      }
+      .tip-buttons{
+        background-color:  hsl(172, 67%, 45%);
+      }
+     .button, input {
+padding: 0,5rem;
+border-radius: 5px;
+border: 1px solid rgb(197, 221, 221);
+cursor: pointer;
+      }
+      .tip-button{
+        display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 0,9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tipcalculator">
+        <div class="input-group">
+          <label for="bill">Bill</label>
+          <input type="number" id="bill" />
+          
+        </div>
+        <div class="cards">
+          <label for="tip">Select tip %</label>
+          <div class="tip-button">
+          <button onclick="setPercent(0.05)" class="tip-button">5%</button>
+          <button onclick="setPercent(0.10)" class="tip-button selected">
+            10%
+          </button>
+          <button onclick="setPercent(0.15)" class="tip-button">15%</button>
+          <button onclick="setPercent(0.25)" class="tip-button">25%</button>
+          <button onclick="setPercent(0.50)" class="tip-button">50%</button>
+          <input type="number" id="Custom" />
+        </div>
+        </div>
+        <div class="from-control">
+          <label for="numberofPeople">NumberofPeople</label>
+          <input type="number" id="people" />
+          </div>
+        </div>
+     
+      <div class="tipamount">
+        <div class="total">
+          <div class="cal">
+            <h3><span style="color: white; font-size:18px ;">Tip Amount</span> <br><span style="color:hsl(186, 14%, 43%); font-size: 15px;">/person</span></h3>
+            <h1 id="total-tip"> <span style="color:hsl(172, 67%, 45%); ;">$0.00</span></h1>
+          </div>
+          <div class="cal">
+            <h3><span style="color: white; font-size:18px ;">Total</span> <br><span style="color:hsl(186, 14%, 43%); font-size: 15px;">/person</span></h3>
+            <h1 id="total-bill"><span style="color:hsl(172, 67%, 45%); ;">$0.00</span></h1>
+          </div>
+          <button class="tip-buttons">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+      let bill = document.getElementById("bill").value;
+      let tipPercent = 0.0;
+      let numberOfPeople = document.getElementById("people").value;
+      let tipAmount = document.getElementById("total-tip");
+      let totalAmount = document.getElementById("total-bill");
+      document.getElementById("bill").addEventListener("input", function () {
+        bill = parseFloat(this.value);
+        tipAmount.textContent = calculateTipAmountPerPerson();
+        totalAmount.textContent = calculateTotalAmountPerPerson();
+      });
+      document.getElementById("people").addEventListener("input", function () {
+        numberOfPeople = parseFloat(this.value);
+        tipAmount.textContent = calculateTipAmountPerPerson();
+        totalAmount.textContent = calculateTotalAmountPerPerson();
+      });
+      document.getElementById("custom").addEventListener("input", function () {
+        tipPercent = parseFloat(this.value) / 100;
+        tipAmount.textContent = calculateTipAmountPerPerson();
+        totalAmount.textContent = calculateTotalAmountPerPerson();
+      });
+
+      function setPercent(percent) {
+        tipPercent = percent;
+        tipAmount.textContent = calculateTipAmountPerPerson();
+        totalAmount.textContent = calculateTotalAmountPerPerson();
+      }
+
+      function calculateTipAmountPerPerson() {
+        return (bill * tipPercent) / numberOfPeople;
+      }
+
+      function calculateTotalAmountPerPerson() {
+        return (bill + bill * tipPercent) / numberOfPeople;
+      }
+
+      console.log(calculateTotalAmountPerPerson());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    *{
+    margin: 0;
+    padding: 0;
+    }
+    body{
+      font-family: "Josefin Sans", serif;
+      background-color: black;
+      color: white;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+}
+ 
+    .bg-img{
+      object-fit: cover;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+input[type='text']{
+padding: 0.5rem;
+background-color: hsl(235, 24%, 19%) ;
+border: none;
+color: white;
+}
+
+li{
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color:  hsl(235, 24%, 19%);
+  border: 1px solid  hsl(237, 14%, 26%);
+  color:white;
+}
+input[type='checkbox']{
+  height: 22px;
+  width: 22px;
+ accent-color: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  caret-color: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+.mode{
+  width: 30px;
+  height:30px ;
+}
+ul{
+  overflow: hidden;
+  border-radius: 6px;
+}
+  </style>
+</head>
+<body>
+  <img class="bg-img" src="/images/bg-desktop-dark.jpg" alt="">
+<div class="container">
+  <h1>TODO</h1>
+  <div class="header">
+    <img class="mode" src="/images/icon-sun.svg" alt="">
+  </div>
+<input type="text" placeholder="Creat a new todo" id="task">
+<!-- <button onclick="addTasks()" >addTasks</button> -->
+<ul id="tasks"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <script>
+const input = document.querySelector('#task')
+const ul = document.querySelector('#tasks')
+
+
+function addTasks(){
+
+  if(input.value == ''){
+    alert('value can not be empty')
+  }
+  else{
+    const li = document.createElement('li')
+  li.innerHTML = input.value;
+
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.onclick = toggleComplete;
+  li.prepend(checkbox);
+
+  ul.appendChild(li)
+  input.value = ''
+  }
+
+}
+input.addEventListener('keyup', function(event){
+  if(event.key === 'Enter'){
+    addTasks();
+  }
+})
+
+function toggleComplete(event){
+  const checkbox = event.target;
+  const listItem = document.parentElement;
+
+  if(checkbox.cheked){
+    listItem.style.textDecoration = 'hone';
+  
+  }
+  else{
+    listItem.style.textDecoration5y
+  }
+}
+  </script>
+  <!-- 
+
+  items left
+
+  All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list
+
+   -->
+</body>
+</html>

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .father {
+    width: 400px;
+    height: 550px;
+    border: 3px solid black;
+}
+
+.son {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: harakat;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes harakat {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(300px, 0);
+    }
+    50% {
+        transform: translate(300px, 450px);
+    }
+    75% {
+        transform: translate(0, 450px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+} */
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.father {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 450px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.son {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+    animation-name: harakat;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes harakat {
+    from {
+        transform: translate(0px);
+    }
+    to {
+        transform: translateY(340px);
+    }
+} */
+
+/* Clock */
+body {
+    padding: 200px;
+}
+.clock-image {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.clock {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: absolute;
+    top: 55%;
+    left: 24%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+.second {
+    width: 2px;
+    height: 100px;
+    background-color: black;
+    transform-origin: 50% bottom;
+    animation-name: second;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.minute {
+    width: 2px;
+    height: 90px;
+    transform: rotate(10deg);
+    background-color: rgb(14, 12, 12);
+    transform-origin: 50% bottom;
+    animation-name: minute;
+    animation-duration: 6000s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes second {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes minute {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

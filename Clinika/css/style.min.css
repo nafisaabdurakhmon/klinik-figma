@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  padding: 30px 0;
+}
+header .container {
+  max-width: 1166px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 38px;
+}
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 34px;
+  list-style: none;
+  color: #0d233b;
+}
+header .burger {
+  display: none;
+}
+
+.hero {
+  min-height: 600px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3bb96d), to(#279a59));
+  background: linear-gradient(to bottom, #3bb96d, #279a59);
+  position: relative;
+}
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.hero .container .left {
+  color: #fff;
+}
+.hero .container .left h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 101%;
+  max-width: 504px;
+}
+.hero .container .left p {
+  margin-top: 20px;
+  line-height: 140%;
+  max-width: 449px;
+}
+.hero .container .left button {
+  width: 220px;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.hero .container .left button:active {
+  scale: 1.1;
+}
+.hero .container .left button:hover {
+  opacity: 0.8;
+}
+.hero .container .left button {
+  background-color: #fff;
+  color: #279a59;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.hero .paginations {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+.hero .paginations .roun {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.hero .paginations .roun:first-child {
+  background-color: #fff;
+}
+
+.about {
+  padding: 130px 0;
+}
+.about .container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about .container .left h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0d233b;
+}
+.about .container .left p {
+  color: #686868;
+  margin-top: 20px;
+  line-height: 140%;
+  max-width: 463px;
+}
+
+.work {
+  padding-bottom: 130px;
+}
+.work .container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.work .container .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.work .container .top h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.work .container .top button {
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.work .container .top button:active {
+  scale: 1.1;
+}
+.work .container .top button:hover {
+  opacity: 0.8;
+}
+.work .container .top button {
+  background-color: #279a59;
+  color: #fff;
+  width: 220px;
+  height: 48px;
+  font-weight: 700;
+}
+.work .container .bottom {
+  margin-top: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.work .container .bottom .card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(52, 52, 52, 0.1411764706);
+          box-shadow: 0 4px 20px 0 rgba(52, 52, 52, 0.1411764706);
+}
+.work .container .bottom .card .card-footer {
+  padding: 20px;
+}
+.work .container .bottom .card .card-footer h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d233b;
+}
+.work .container .bottom .card .card-footer p {
+  color: #3bb96d;
+  line-height: 140%;
+  margin-top: 20px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.work .container .bottom .card .card-footer p:hover {
+  color: #de3f53;
+}
+
+.employ {
+  background: #f1f5f8;
+  padding: 130px 0;
+}
+.employ .container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.employ .container .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.employ .container .top h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: #0d233b;
+}
+.employ .container .top .top-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.employ .container .top .top-buttons button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: 700;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+.employ .container .top .top-buttons button:first-child {
+  border: 1px solid #3bb96d;
+  color: #3bb96d;
+  background: none;
+}
+.employ .container .top .top-buttons button:hover {
+  background: #3bb96d;
+  color: #fff;
+  border: 1px solid #dfe6e2;
+}
+.employ .container .top .top-buttons button:last-child {
+  background: #279a59;
+  border: none;
+  color: #fff;
+}
+.employ .container .top .top-buttons button:last-child:hover {
+  background: #f1f5f8;
+  color: #279a59;
+  border: 1px solid #279a59;
+}
+.employ .container .center {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.employ .container .center .card .card-footer {
+  padding-top: 20px;
+}
+.employ .container .center .card .card-footer h2 {
+  color: #0d233b;
+  font-weight: 700;
+  font-size: 20px;
+}
+.employ .container .center .card .card-footer p {
+  color: #0d233b;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.employ .container .center .card .card-footer button {
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.employ .container .center .card .card-footer button:active {
+  scale: 1.1;
+}
+.employ .container .center .card .card-footer button:hover {
+  opacity: 0.8;
+}
+.employ .container .center .card .card-footer button {
+  width: 220px;
+  height: 48px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3bb96d), to(#279a59));
+  background: linear-gradient(to bottom, #3bb96d, #279a59);
+  color: #fff;
+  margin-top: 20px;
+}
+.employ .container .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+.employ .container .bottom button {
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.employ .container .bottom button:active {
+  scale: 1.1;
+}
+.employ .container .bottom button:hover {
+  opacity: 0.8;
+}
+.employ .container .bottom button {
+  width: 220px;
+  height: 48px;
+  background: #fff;
+  color: #279a59;
+  border: 1px solid #279a59;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.discount {
+  padding: 130px 0;
+}
+.discount .container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.discount .container h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+}
+.discount .container .middle {
+  margin-top: 40px;
+}
+.discount .container .middle .left {
+  position: relative;
+  width: 561px;
+  height: 373px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3bb96d), to(#279a59));
+  background: linear-gradient(to bottom, #3bb96d, #279a59);
+  color: #fff;
+  padding: 30px 0 24px 30px;
+}
+.discount .container .middle .left h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.discount .container .middle .left p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 318px;
+  margin-top: 20px;
+}
+.discount .container .middle .left b {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.discount .container .middle .left button {
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.discount .container .middle .left button:active {
+  scale: 1.1;
+}
+.discount .container .middle .left button:hover {
+  opacity: 0.8;
+}
+.discount .container .middle .left button {
+  width: 220px;
+  height: 48px;
+  background: #fff;
+  color: #279a59;
+  border: 1px solid #279a59;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.discount .container .middle .left img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=style.min.css.map */

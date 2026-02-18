@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://www.shutterstock.com/image-photo/concrete-floor-smoke-background-600nw-1696591468.jpg);
+    background-size: cover;
+scroll-behavior: smooth;
+    gap: 1rem;
+}
+.car{
+    display: flex;
+    justify-content: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+    </style>
+</head>
+<body>
+
+<div class="car"></div>
+<div class="info">
+    <img width="70" src="https://media.printables.com/media/prints/321186/images/2772740_6ba3a5b5-a72c-4528-b5e1-d60caab08965/thumbs/cover/800x800/png/audi_logo-300x300.webp" alt="">
+    <h1>AUDI</h1>
+    <p>Audi AG is a German automotive manufacturer of luxury vehicles headquartered in Ingolstadt, Bavaria, Germany.</p>
+</div>
+
+
+    <script>
+const div = document.querySelector('.car');
+
+
+let cars = [
+'https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grD4_mtjdhon8WqzxTuloW9jCg5pKXLgMrUBejG5Bg3gMk-LYBCU5pBjAJMm8qiOgB8ZkcmBkYWCuAjEgGEODjKy3KKUgsSszVK89MKckQ1DAgEgizu7iGOHr6BAMAkhIhZOkAAAA?wid=850',
+'https://apiweb.rolf.ru/storage/thumbnails/large/models/120/6859/110793bb1a8b686f42fdc089ae8e640f.png',
+'https://cdn.avtodom.ru/images/61/61/13289061.png?upscale=0&op=resize&w=720&format=webp',
+ ];
+
+
+         for (let i = 0; i < cars.length; i++){
+const img = document.createElement('img');
+img.src = cars[i];
+img.width = 300;
+div.appendChild(img)
+         }
+
+         
+        
+    </script>
+</body>
+</html>

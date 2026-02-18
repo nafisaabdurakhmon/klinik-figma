@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color:  hsl(0, 0%, 100%);
+    padding: 1rem;
+
+}
+main{
+    display: flex;
+    background-color: hsl(0, 0%, 98%);
+    height: 100vh;
+}
+.cards{
+    display: flex;
+
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    margin-top: 2rem;
+   gap: 1rem;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Where in the world?</h1>
+        <button>Dark Mode</button>
+    </header>
+<main>
+    <div>
+        <input type="text" id="search" placeholder="Search for a country..">
+</div>
+<div class="cards">
+    <!-- <div class="card">
+      <img src="https://flagcdn.com/br.svg" width="100%" alt="">
+        <h2>Brazil</h2>
+         <p>population 212559409,</p>
+         <p>region Americas</p>
+         <p>capital Brasília</p> 
+    </div>  -->
+</div>
+</main>
+
+
+    <script>
+const api = 'https://restcountries.com/v3.1/region/europe';
+const apiSearch = 'https://restcountries.com/v3.1/name/{name}';
+const cards = document.querySelector('.cards');
+fetch (api)
+  .then (respons => respons.json())
+  .then (data => {
+data.forEach(country => {
+    console.log(country)
+const card  = document.createElement('div');
+card.classList.add('card');
+card.innerHTML = `
+      <img src="${country.flags.svg}" width="100%" alt="">
+        <h2>${country.name.common}</h2>
+         <p>${country.population}</p>
+         <p>${country.region}</p>
+         <p>${country.capital[0]}</p> `;
+   cards.appendChild(card);
+});
+   
+  });
+
+    </script>
+</body>
+</html>

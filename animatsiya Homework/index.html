@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Animated Ellipses</title>
+        <style>
+            body {
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1000px;
+                height: 500px;
+                overflow: hidden;
+                position: relative;
+                border: 3px solid black;
+            }
+            .ellipse {
+                position: absolute;
+                border: 4px solid black;
+                border-radius: 50%;
+                animation: moveRotate 5s linear infinite;
+            }
+            .ellipse:nth-child(1) {
+                width: 200px;
+                height: 100px;
+                top: 10%;
+                left: 40%;
+            }
+            .ellipse:nth-child(2) {
+                width: 150px;
+                height: 200px;
+                top: 30%;
+                left: 10%;
+            }
+            .ellipse:nth-child(3) {
+                width: 100px;
+                height: 50px;
+                top: 50%;
+                left: 70%;
+            }
+            .ellipse:nth-child(4) {
+                width: 180px;
+                height: 90px;
+                bottom: 10%;
+                left: 20%;
+            }
+
+            /* @keyframes moveRotate {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                }
+                50% {
+                    transform: translateY(50px) rotate(180deg);
+                }
+                100% {
+                    transform: translateY(0) rotate(360deg);
+                }
+            } */
+
+            @keyframes moveRotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ellipse"></div>
+        <div class="ellipse"></div>
+        <div class="ellipse"></div>
+        <div class="ellipse"></div>
+    </body>
+</html>

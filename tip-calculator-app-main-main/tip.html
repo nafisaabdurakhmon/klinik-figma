@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            height: 100vh;
+        }
+        .container{
+display: flex;
+ 
+        }
+        .from-control{
+            display:flex ;
+            flex-direction: column;
+        }
+        .tip-buttons{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            flex: 20%;
+        }
+        .tip-button{
+
+        }
+        .cal{
+            display: flex;
+            justify-content: space-between;
+        }
+        .from, .result{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="from">
+            <div class="from-control">
+                <label for="bill">Bill</label>
+            <input type="number" id="bill">
+            <label for="tip">Select tip %</label>
+            </div>
+      
+        <div class="tip-buttons">
+            <button onclick="setPercent(0.05)" class="tip-button">5%</button>
+            <button onclick="setPercent(0.10)" class="tip-button selected">10%</button>
+            <button onclick="setPercent(0.15)" class="tip-button">15%</button>
+            <button  onclick="setPercent(0.25)" class="tip-button">25%</button>
+            <button  onclick="setPercent(0.50)" class="tip-button">50%</button>
+            <input type="number" id="Custom">
+        </div>
+       <div class="from-control"> 
+        <label for="numberofPeople">NumberofPeople</label>
+        <input type="number" id="people"></div>
+    </div>
+    <div class="result">
+        <div class="canculate">
+            <div class="cal"> 
+                <h3>Tip Amount</h3>
+                <h1 id="total-tip">$0.00</h1>
+            </div>
+            <div class="cal">
+                <h3>Total</h3>
+                <h1 id="total-bill">$0.00</h1>
+            </div>
+            <button>Reset</button>
+        </div>
+
+    </div>
+</div>
+<script>
+    let bill = document.getElementById(bill);
+  let selectTip = 0.05;
+  let numberofPeople = document.getElementById(people);
+  document.getElementById("bill").addEventListener('input' , function(){
+    bill = perseFloat(this.value);
+    calculateTipAmountPerPerson();
+    calculateTipAmountPerPerson();
+    
+  })
+  document.getElementById("people").addEventListener('input' , function(){
+    bill = perseFloat(this.value);
+    calculateTipAmountPerPerson();
+    calculateTipAmountPerPerson();
+    
+  })
+  document.getElementById("custom").addEventListener('input' , function(){
+    bill = perseFloat(this.value);
+    calculateTipAmountPerPerson();
+    calculateTipAmountPerPerson();
+    
+  })
+
+
+
+function setPercent(percent){
+    tipPercent = percent;
+}
+
+  function calculateTipAmountPerPerson(){
+    return(bill * tipPerson) / numberofPeople
+  }
+
+</script>
+</body>
+</html>
