@@ -290,7 +290,7 @@ header {
         }
     }
 }
-.discount {
+.discound {
     padding: 130px 0;
     .container {
         max-width: $container_length;
@@ -303,6 +303,8 @@ header {
         }
         .middle {
             margin-top: 40px;
+            display: flex;
+            align-items: center;
             .left {
                 position: relative;
                 width: 561px;
@@ -342,6 +344,229 @@ header {
                     position: absolute;
                     bottom: 0;
                     right: 0;
+                }
+            }
+            .right {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 50%;
+                gap: 20px;
+                .card {
+                    width: 270px;
+                    height: 175px;
+                    border-radius: 5px;
+                    background: #6567f2;
+                    color: #fff;
+                    padding: 10px;
+                    position: relative;
+                    h1 {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                    p {
+                        font-size: 12px;
+                        font-weight: 400;
+                        margin-top: 7px;
+                    }
+                    b {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                    button {
+                        @include button;
+                        width: 110px;
+                        height: 30px;
+                        background: #fff;
+                        color: #279a59;
+                        border: 1px solid #279a59;
+                        font-weight: 700;
+                        font-size: 14px;
+                        margin-top: 48px;
+                    }
+                }
+                & > *:nth-child(2) {
+                    background: #f57676;
+                }
+                & > *:nth-child(3) {
+                    background: #ffdb5c;
+                }
+                & > *:nth-child(4) {
+                    background: #27c8da;
+                }
+            }
+        }
+    }
+}
+.stat {
+    padding: 130px 0;
+    background: #f1f5f8;
+    .container {
+        max-width: $container_length;
+        margin: 0 auto;
+        padding: 0 15px;
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #000;
+        }
+        .middle {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card {
+                background: linear-gradient(to bottom, #27c8da, #24bfd0);
+                padding: 16px 0 16px 14px;
+                color: #fff;
+                max-width: 367px;
+                width: 100%;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .logo {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 140%;
+                    }
+                }
+            }
+        }
+        .bottom {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                p {
+                    max-width: 463px;
+                    color: #686868;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 140%;
+                }
+                button {
+                    @include button;
+                    background: $main-color;
+                    color: #fff;
+                    width: 220px;
+                    height: 48px;
+                    margin-top: 20px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    max-width: $container_length;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Equipment Section */
+.equipment {
+    padding: 60px 0;
+
+    &-cards {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    &-card {
+        flex: 1;
+        min-width: 280px;
+        background: $bg-light;
+        border-radius: 20px;
+        padding: 30px;
+        transition: 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                font-size: 14px;
+                color: $text-gray;
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 18px;
+
+                &::before {
+                    content: '▶';
+                    position: absolute;
+                    left: 0;
+                    color: $primary;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* Advantages Section */
+.profesion {
+    padding: 30px 0 30px;
+    background-color: #279a59;
+    .container {
+        max-width: $container_length;
+        margin: 0 auto;
+        padding: 0 15px;
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 140%;
+            color: #000;
+        }
+        .left {
+            .middil {
+                li {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    list-style: none;
                 }
             }
         }
