@@ -1,0 +1,1420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$mobile: 430px;
+$tablet: 970px;
+
+@mixin media($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+$main-color: #ff8a00;
+$--green: #3fa72f;
+$--black: #311f09;
+$--text: #5c4529;
+$--price: #59442b;
+$--font-family: 'Poppins', sans-serif;
+$--font-family2: 'Raleway', sans-serif;
+$--font-family3: 'Tinos', sans-serif;
+
+/*HEADER*/
+header {
+    padding-top: 40px;
+    @include media($tablet) {
+        padding-top: 25px;
+    }
+    .container {
+        max-width: 1110px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 0 15px;
+
+        .left {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            max-width: 845px;
+            justify-content: space-between;
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+                .logo-box {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 25px;
+                    font-weight: 600;
+                    font-family: $--font-family;
+                    line-height: 100%;
+                }
+                h5 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: $--font-family;
+                    color: $--text;
+                    line-height: 100%;
+                    span {
+                        color: $main-color;
+                    }
+                }
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 45px;
+                @include media($tablet) {
+                    display: none;
+                }
+                li {
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-family: var(--font-family);
+                    color: var(--text);
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                li:hover {
+                    color: $main-color;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .card-wrapper {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #d0ccc720;
+                position: relative;
+
+                .quantity {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background-color: #ff3838;
+                    font-size: 8px;
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    line-height: 100%;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 6px;
+                    right: 3px;
+                }
+            }
+        }
+        button {
+            width: 110px;
+            height: 50px;
+            border-radius: 133px;
+            background-color: $--green;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: $--font-family;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            @include media($tablet) {
+                display: none;
+            }
+            &:hover {
+                opacity: 80%;
+            }
+        }
+        .home {
+            display: none;
+            @include media($tablet) {
+                display: block;
+            }
+        }
+    }
+}
+/* hero */
+main {
+    .container {
+        max-width: 1110px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 154px 15px;
+        gap: 2px;
+        @include media($mobile) {
+            flex-direction: column;
+            padding: 56px 15px 31px;
+        }
+        @include media($tablet) {
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .left {
+            .hero-top {
+                width: 152px;
+                height: 40px;
+                background-color: #ff880053;
+                border-radius: 126px;
+                color: $main-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $--font-family2;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 110%;
+                @include media($mobile) {
+                    width: 93px;
+                    height: 25px;
+                    font-size: 12px;
+                }
+            }
+            h1 {
+                max-width: 288px;
+                font-weight: 700;
+                font-size: 80px;
+                line-height: 110%;
+                color: $--black;
+                font-family: $--font-family2;
+                margin-top: 22px;
+                @include media($mobile) {
+                    font-size: 60px;
+                }
+            }
+            .description {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 200%;
+                color: $--text;
+                font-family: $--font-family;
+                margin-top: 30px;
+                max-width: 523px;
+                @include media($mobile) {
+                    font-size: 12px;
+                    max-width: 313px;
+                }
+            }
+            .buttons {
+                display: flex;
+                align-items: center;
+                gap: 23px;
+                margin-top: 77px;
+                @include media($mobile) {
+                    margin-top: 40px;
+                }
+                button {
+                    max-width: 232px;
+                    width: 100%;
+                    height: 74px;
+                    border-radius: 162px;
+                    font-family: $--font-family;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 200%;
+                    color: #ffffff;
+                    cursor: pointer;
+                    border: none;
+                    @include media($mobile) {
+                        width: 139px;
+                        height: 44px;
+                        font-size: 11px;
+                        border-radius: 97px;
+                    }
+                    &:first-child {
+                        background-color: $main-color;
+                    }
+                    &:last-child {
+                        background-color: $--green;
+                    }
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                    &:hover {
+                        opacity: 80%;
+                    }
+                }
+            }
+        }
+        .right {
+            max-width: 699px;
+            max-height: 599px;
+            width: 100%;
+            @include media($mobile) {
+                max-width: 368px;
+                height: 315px;
+                margin-top: 40px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                margin-top: 30px;
+                @include media($tablet) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    //*hero main//
+    .container2 {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        gap: 2px;
+        background-color: #3fc66e26;
+        @include media($mobile) {
+            flex-direction: column-reverse;
+            padding: 70px 25px;
+        }
+        @include media($tablet) {
+            flex-direction: column-reverse;
+            padding: 75px 25px;
+        }
+        .left2 {
+            width: 100%;
+            max-width: 706px;
+            margin-top: 77px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .right2 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            max-width: 769px;
+            justify-content: space-between;
+            .title {
+                font-weight: 700;
+                font-size: 80px;
+                line-height: 110%;
+                color: $--text;
+                font-family: $--font-family2;
+                margin-top: 22px;
+                @include media($mobile) {
+                    font-size: 35px;
+                    line-height: 114%;
+                }
+                span {
+                    color: $main-color;
+                }
+            }
+            .description2 {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 200%;
+                color: $--text;
+                font-family: $--font-family;
+                margin-top: 30px;
+                max-width: 433px;
+                @include media($mobile) {
+                    font-size: 12px;
+                    max-width: 291px;
+                }
+            }
+            .buttons2 {
+                display: flex;
+                align-items: center;
+                gap: 23px;
+                margin-top: 77px;
+
+                button {
+                    max-width: 232px;
+                    width: 100%;
+                    height: 74px;
+                    border-radius: 162px;
+                    font-family: $--font-family;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 200%;
+                    color: #ffffff;
+                    cursor: pointer;
+                    border: none;
+                    background-color: $main-color;
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                    &:hover {
+                        opacity: 30%;
+                    }
+                    @include media($mobile) {
+                        width: 168px;
+                        height: 55px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    //*text-menu*/
+    .text-menu {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 80px;
+        font-weight: 700;
+        font-family: $--font-family3;
+        line-height: 200%;
+        color: $--black;
+        text-align: center;
+        @include media($mobile) {
+            font-size: 35px;
+            line-height: 114%;
+            font-weight: 700;
+        }
+        // @include media($tablet) {
+        //     font-size: 60px;
+        //     line-height: 110%;
+        //     font-weight: 700;
+        // }
+    }
+    //*menu*/
+    .container3 {
+        max-width: 1112px;
+        margin: 0 auto;
+        padding: 164px 15px 201px;
+        @include media($mobile) {
+            padding: 62px 15px;
+        }
+        .categories {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            overflow-x: auto;
+            width: 100%;
+
+            @include media($mobile) {
+                gap: 10px;
+            }
+
+            button {
+                width: 192px;
+                height: 74px;
+                flex-shrink: 0;
+                border-radius: 162px;
+                padding: 10px 15px;
+                border: none;
+                background-color: #d0ccc73b;
+                cursor: pointer;
+                color: $--text;
+                font-size: 20px;
+                font-family: $--font-family;
+                font-weight: 400;
+                line-height: 200%;
+                &:active {
+                    transform: scale(0.9);
+                }
+
+                &:hover {
+                    opacity: 60%;
+                }
+                @include media($mobile) {
+                    font-size: 12px;
+                    width: 110px;
+                    height: 40px;
+                }
+                @include media($tablet) {
+                }
+            }
+            .active {
+                width: 232px;
+                height: 74px;
+                border-radius: 162px;
+                background-color: #3e2602;
+                color: white;
+                font-size: 20px;
+                font-family: $--font-family;
+                font-weight: 600;
+                line-height: 200%;
+                cursor: pointer;
+                &:hover {
+                    opacity: 60%;
+                }
+                @include media($mobile) {
+                    font-size: 12px;
+                    width: 110px;
+                    height: 40px;
+                }
+            }
+        }
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 10px;
+
+            justify-items: center;
+            max-width: 1112px;
+            margin: 20px auto 0;
+            @include media($tablet) {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            @include media($mobile) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .menu-item {
+                display: flex;
+                flex-direction: column;
+                max-width: 344px;
+                background: white;
+                padding: 33px 28px;
+                border-radius: 70px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+                @include media($mobile) {
+                    padding: 12px;
+                    border-radius: 18px;
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+
+                    @include media($mobile) {
+                        width: 114px;
+                        height: 114px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                h3 {
+                    font-weight: 600;
+                    font-size: 30px;
+                    font-family: $--font-family;
+                    line-height: 200%;
+                    color: $--black;
+                    text-align: center;
+                    margin: 10px 0;
+                    @include media($mobile) {
+                        font-size: 14px;
+                    }
+                }
+                .rating-img {
+                    width: 163px;
+                    height: 24px;
+                    display: block;
+                    margin: 0 auto;
+                    @include media($mobile) {
+                        width: 60px;
+                        height: 9px;
+                    }
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $--price;
+                    text-align: center;
+                    line-height: 200%;
+                    margin-top: 15px;
+                    font-family: $--font-family;
+                    @include media($mobile) {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 12px;
+                    }
+                }
+                .price {
+                    font-weight: 600;
+                    font-size: 25px;
+                    font-family: $--font-family;
+                    line-height: 100%;
+                    color: $--black;
+                    margin: 10px 0;
+
+                    @include media($mobile) {
+                        font-size: 16px;
+                        color: #ff8a00;
+                    }
+                }
+                button {
+                    max-width: 157px;
+                    height: 55px;
+                    background: $main-color;
+                    border: none;
+                    padding: 10px;
+                    width: 100%;
+                    color: white;
+                    border-radius: 162px;
+                    cursor: pointer;
+                    display: block;
+                    &:hover {
+                        background-color: skyblue;
+                        opacity: 60%;
+                    }
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                    @include media($tablet) {
+                        display: none;
+                    }
+                }
+                .plus {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    display: none;
+                    @include media($tablet) {
+                        display: block;
+                    }
+                    .plus-button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 83.1px;
+                        background-color: #ff9800;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+
+                        @include media($mobile) {
+                            width: 33px;
+                            height: 33px;
+                        }
+                    }
+                }
+                .prise {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    margin-top: 30px;
+
+                    @include media($mobile) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 88px;
+            @include media($mobile) {
+                display: none;
+            }
+            @include media($tablet) {
+                display: none;
+            }
+            .prev {
+                background: #3e2602;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            button.active {
+                background-color: #ff880033;
+                color: #ff8a00;
+            }
+            button.active2 {
+                background-color: #b7a28b00;
+                color: #b7a28b;
+                text-align: center;
+            }
+            button {
+                min-width: 55px;
+                min-height: 55px;
+                border-radius: 15px;
+
+                color: white;
+                padding: 5px 10px;
+                border: none;
+
+                cursor: pointer;
+            }
+        }
+    }
+    //*table*//
+    .container4 {
+        max-width: 1542px;
+        margin: 0 auto;
+        padding: 86px 20px;
+        background: #fff4e7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 43px;
+
+        @include media($tablet) {
+            flex-direction: column-reverse;
+            gap: 40px;
+            padding: 86px 60px;
+        }
+        @include media($mobile) {
+            padding: 60px 0;
+        }
+        .left {
+            position: relative;
+            max-width: 882px;
+            margin: 0 auto;
+            .foods {
+                max-width: 650px;
+                @include media($mobile) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                @include media($tablet) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .kafe {
+                position: absolute;
+                top: 0;
+                left: 70%;
+
+                @include media($tablet) {
+                    position: absolute;
+                    top: -6%;
+                    left: 66%;
+                    width: 150px;
+                    height: 150px;
+                }
+
+                @include media($mobile) {
+                    position: absolute;
+                    top: -20px;
+                    left: 70%;
+                    width: 87px;
+                    height: 87px;
+                }
+            }
+
+            .rest {
+                position: absolute;
+                bottom: -10%;
+                right: 75%;
+
+                @include media($mobile) {
+                    position: absolute;
+                    bottom: -6%;
+                    right: 75%;
+                    width: 87px;
+                    height: 87px;
+                }
+                // @include media($tablet) {
+                //     position: absolute;
+                //     bottom: -8%;
+                //     right: 78%;
+                //     width: 150px;
+                //     height: 150px;
+                // }
+            }
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            @include media($mobile) {
+                padding: 0 25px;
+                gap: 32px;
+            }
+            h1 {
+                font-weight: 700;
+                font-size: 80px;
+                font-family: $--font-family3;
+                color: $--black;
+                line-height: 110%;
+                @include media($mobile) {
+                    font-size: 35px;
+                    line-height: 115%;
+                }
+                @include media($tablet) {
+                    font-size: 55px;
+                    line-height: 115%;
+                }
+                span {
+                    color: $main-color;
+                }
+            }
+            p {
+                font-family: $--font-family;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 200%;
+                color: $--text;
+                @include media($mobile) {
+                    font-size: 12px;
+                }
+                @include media($tablet) {
+                    font-size: 15px;
+                }
+            }
+            .reservation {
+                max-width: 232px;
+                width: 100%;
+                height: 74px;
+                border-radius: 162px;
+                background-color: $main-color;
+                border: none;
+                font-family: $--font-family3;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 200%;
+                color: #ffffff;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(0.9);
+                }
+                &:hover {
+                    opacity: 60%;
+                }
+                @include media($mobile) {
+                    font-size: 14px;
+                    width: 165px;
+                    height: 55px;
+                }
+                @include media($tablet) {
+                }
+            }
+        }
+    }
+    //chefs//
+    .container5 {
+        max-width: 1112px;
+        margin: 0 auto;
+        padding: 0 20px;
+        .chefs {
+            h1 {
+                font-weight: 700;
+                font-size: 80px;
+                line-height: 200%;
+                font-family: $--font-family3;
+                color: $--black;
+                margin-bottom: 40px;
+                margin-top: 50px;
+                text-align: center;
+
+                @include media($mobile) {
+                    font-size: 35px;
+                    line-height: 135%;
+                }
+                @include media($tablet) {
+                    font-size: 50px;
+                    line-height: 155%;
+                }
+            }
+            .chefs-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+                .chef-card {
+                    background: white;
+                    padding: 15px;
+                    border-radius: 10px;
+                    text-align: center;
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                        @include media($mobile) {
+                            width: 157px;
+                            height: 250px;
+                        }
+                    }
+                    h3 {
+                        font-weight: 600;
+                        font-size: 25px;
+                        font-family: $--font-family;
+                        line-height: 200%;
+                        color: $--text;
+                        margin: 10px 0 5px 0;
+                        @include media($mobile) {
+                            font-size: 14px;
+                        }
+                        @include media($tablet) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        font-weight: 400;
+                        font-size: 25px;
+                        font-family: $--font-family;
+                        line-height: 200%;
+                        color: #a08d76;
+                        @include media($mobile) {
+                            font-size: 14px;
+                        }
+                        @include media($tablet) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .chef-card3 {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            @include media($tablet) {
+                display: block;
+            }
+            img {
+                width: 100%;
+                border-radius: 10px;
+                @include media($mobile) {
+                    width: 157px;
+                    height: 250px;
+                }
+            }
+            h3 {
+                font-weight: 600;
+                font-size: 25px;
+                font-family: $--font-family;
+                line-height: 200%;
+                color: $--text;
+                margin: 10px 0 5px 0;
+                @include media($mobile) {
+                    font-size: 14px;
+                }
+                @include media($tablet) {
+                    font-size: 18px;
+                }
+            }
+            p {
+                font-weight: 400;
+                font-size: 25px;
+                font-family: $--font-family;
+                line-height: 200%;
+                color: #a08d76;
+                @include media($mobile) {
+                    font-size: 14px;
+                }
+                @include media($tablet) {
+                    font-size: 18px;
+                }
+            }
+        }
+        .view-all {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+
+            @include media($tablet) {
+                display: none;
+            }
+
+            button {
+                width: 235px;
+                height: 74px;
+                background: #ff9800;
+                border: none;
+                padding: 10px;
+                color: white;
+                border-radius: 162px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 200%;
+                cursor: pointer;
+                display: block;
+
+                &:active {
+                    scale: 0.95;
+                }
+                &:hover {
+                    opacity: 30%;
+                }
+            }
+        }
+    }
+    //AVATAR
+    .container6 {
+        padding: 100px 0 100px;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-image: url(/delizioso/image/Round.png);
+            background-size: cover;
+
+            .middel {
+                width: 100%;
+                max-width: 1440px;
+                max-height: 1384px;
+                margin: 0 auto;
+
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                h2 {
+                    font-family: $--font-family3;
+                    font-weight: 700;
+                    font-size: 80px;
+                    line-height: 200%;
+                    color: $--black;
+                    @include media($tablet) {
+                        font-size: 50px;
+                        line-height: 155%;
+                    }
+                    @include media($mobile) {
+                        font-size: 35px;
+                        line-height: 115%;
+                    }
+                }
+                .profile-img {
+                    max-width: 261px;
+                    max-height: 261px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin: 0 auto;
+                    @include media($mobile) {
+                        max-width: 120px;
+                        max-height: 120px;
+                        object-fit: cover;
+                    }
+                }
+                h3 {
+                    font-weight: 600;
+                    font-size: 30px;
+                    line-height: 200%;
+                    font-family: $--font-family;
+                    color: $--black;
+                    margin: 10px 0 5px 0;
+                    @include media($tablet) {
+                        font-size: 20px;
+                        line-height: 200%;
+                    }
+                    @include media($mobile) {
+                        font-size: 16px;
+                        line-height: 160%;
+                    }
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 200%;
+                    font-family: $--font-family;
+                    color: $--text;
+                    @include media($tablet) {
+                        font-size: 16px;
+                        line-height: 200%;
+                    }
+                    @include media($mobile) {
+                        font-size: 12px;
+                        line-height: 160%;
+                    }
+                }
+                .title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    position: relative;
+                    .quote-left {
+                        margin-bottom: 130px;
+                        width: 40px;
+                        height: 40px;
+                        @include media($mobile) {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                    p {
+                        font-size: 20px;
+                        font-family: $--font-family;
+                        font-weight: 400;
+                        line-height: 200%;
+                        color: $--text;
+                        margin-top: 10px;
+                        max-width: 524px;
+                        @include media($tablet) {
+                            font-size: 16px;
+                            line-height: 200%;
+                        }
+                        @include media($mobile) {
+                            font-size: 12px;
+                            line-height: 160%;
+                        }
+                    }
+
+                    .quote-right {
+                        position: absolute;
+                        top: 130px;
+                        right: 0;
+                        width: 40px;
+                        height: 40px;
+                        @include media($mobile) {
+                            position: absolute;
+                            top: 125px;
+                            right: -16px;
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+                .avatars {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    margin-top: 15px;
+                    .avatar {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    //TIMER
+    .container7 {
+        padding: 70px 20px;
+        max-width: 1190px;
+        margin: 0 auto;
+
+        .left {
+            background: url('/delizioso/image/Background\ \(2\).png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 588px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            border-radius: 40px;
+
+            .middle {
+                color: white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                // @include media($mobile) {
+                //     max-width: 325px;
+                //     max-height: 416px;
+                // }
+
+                h1 {
+                    color: white;
+                    font-size: 80px;
+                    font-weight: 700;
+                    font-family: $--font-family3;
+                    line-height: 200%;
+                    @include media($mobile) {
+                        font-size: 40px;
+                        line-height: 115%;
+                    }
+                    @include media($tablet) {
+                        font-size: 60px;
+                        line-height: 115%;
+                        text-align: center;
+                    }
+                }
+
+                .title {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 600;
+                        font-family: $--font-family;
+                        line-height: 200%;
+                        @include media($mobile) {
+                            font-size: 16px;
+                            line-height: 100%;
+                        }
+                        @include media($tablet) {
+                            font-size: 20px;
+                            line-height: 100%;
+                        }
+                    }
+
+                    p {
+                        font-weight: 400;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                        line-height: 200%;
+                        font-family: $--font-family;
+                        @include media($mobile) {
+                            font-size: 12px;
+                            line-height: 100%;
+                            text-align: center;
+                        }
+                        @include media($tablet) {
+                            font-size: 16px;
+                            line-height: 100%;
+                        }
+                    }
+                }
+                .btn-container {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    @include media($tablet) {
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+                    button {
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 200%;
+                        font-family: $--font-family;
+
+                        &:active {
+                            transition: all 0.3s ease;
+                            scale: 0.9;
+                        }
+                        &:hover {
+                            opacity: 60%;
+                        }
+                        &:first-child {
+                            width: 232px;
+                            height: 74px;
+                            border-radius: 162px;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 100%;
+                            font-family: $--font-family;
+                            background: #ff7f00;
+                            color: white;
+                            @include media($mobile) {
+                                width: 168px;
+                                height: 50px;
+                                font-size: 16px;
+                                line-height: 200%;
+                            }
+                            @include media($tablet) {
+                                font-size: 20px;
+                                line-height: 100%;
+                            }
+                        }
+                        &:last-child {
+                            width: 232px;
+                            height: 74px;
+                            border-radius: 162px;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 100%;
+                            font-family: $--font-family;
+                            background: #ffffff;
+                            color: black;
+                            @include media($mobile) {
+                                width: 168px;
+                                height: 50px;
+                                font-size: 16px;
+                                line-height: 200%;
+                            }
+                            @include media($tablet) {
+                                font-size: 20px;
+                                line-height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//FOOTER//
+.footer {
+    background-color: #311f09;
+    padding: 149px 0 74px;
+    @include media($mobile) {
+        padding: 92px 0 52px;
+    }
+    @include media($tablet) {
+        padding: 100px 0 52px;
+    }
+    .footer-top {
+        max-width: 1150px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media($mobile) {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        @include media($tablet) {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+                .logo-box {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 18px;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 25px;
+                    font-weight: 600;
+                    font-family: $--font-family;
+                    line-height: 100%;
+                }
+                h5 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: $--font-family;
+                    color: white;
+                    line-height: 100%;
+                    span {
+                        color: $main-color;
+                    }
+                }
+            }
+            p {
+                font-family: $--font-family;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 200%;
+                color: #e3e2e0;
+                max-width: 352px;
+                // width: 100%;
+                @include media($mobile) {
+                    font-size: 14px;
+                    line-height: 200%;
+                }
+                @include media($tablet) {
+                    font-size: 18px;
+                    line-height: 200%;
+                }
+            }
+            .social-icons {
+                display: flex;
+                align-items: center;
+
+                @include media($mobile) {
+                    gap: 10px;
+                }
+                a {
+                    margin: 0 10px;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        @include media($mobile) {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 45px;
+            // padding: 0 30px;
+            @include media($mobile) {
+                flex-direction: column;
+                margin-top: 69px;
+            }
+            @include media($tablet) {
+                // flex-direction: column;
+            }
+            .column {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include media($mobile) {
+                    gap: 10px;
+                }
+                h3 {
+                    color: orange;
+                    font-family: $--font-family;
+                    font-weight: 600;
+                    font-size: 25px;
+                    line-height: 200%;
+                }
+                a {
+                    display: block;
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: $--font-family;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 200%;
+                }
+                p {
+                    color: #e3e2e0;
+                    font-family: $--font-family;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 200%;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        color: #e3e2e0;
+        font-family: $--font-family;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 200%;
+        text-align: center;
+        margin-top: 60px;
+    }
+}

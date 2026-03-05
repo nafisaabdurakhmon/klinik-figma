@@ -135,8 +135,8 @@ header .container .right {
 }
 
 /* HERO Main*/
-main {
-}
+/* main {
+} */
 main .container {
     max-width: 1110px;
     margin: 169px auto 0;
@@ -338,8 +338,8 @@ main .container .right img {
 }
 .menu-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2fr 3fr);
+    gap: 10px;
     margin-top: 20px;
 }
 .menu-item {
@@ -393,7 +393,7 @@ main .container .right img {
 .plus {
     width: 40px;
     height: 40px;
-    display: none;
+    /* display: none; */
 }
 .plus-button {
     border-radius: 83px;
